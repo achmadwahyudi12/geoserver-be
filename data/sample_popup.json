@@ -1,0 +1,36 @@
+[
+  {
+    "displayTitle": "Batas Witel",
+    "fieldAliases": {
+      "objectid": "ID",
+      "regional": "Regional",
+      "witel": "Witel"
+    },
+    "geometryType": "Polygon",
+    "attributes": {
+      "objectid": 390,
+      "regional": "REGIONAL 2",
+      "witel": "JAKBAR"
+    },
+    "geometry": "GEOMETRY"
+  },
+  {
+    "displayTitle": "Batas Kelurahan",
+    "fieldAliases": {
+      "objectid": "ID",
+      "kelurahan": "Kelurahan",
+      "kecamatan": "Kecamatan",
+      "kota": "Kota",
+      "provinsi": "Provinsi"
+    },
+    "geometryType": "Polygon",
+    "attributes": {
+      "objectid": 390,
+      "kelurahan": "JAKBAR",
+      "kecamatan": "KEBON JERUK",
+      "kota": "JAKARTA BARAT",
+      "provinsi": "DKI JAKARTA"
+    },
+    "geometry": "GEOMETRY"
+  }
+]

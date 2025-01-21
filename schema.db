@@ -1,0 +1,34 @@
+-- Langkah 1: Membuat tipe ENUM
+CREATE TYPE geometry_type AS ENUM ('point', 'polyline', 'polygon');
+
+-- Langkah 2: Membuat tabel dengan tipe ENUM
+CREATE TABLE layers (
+    ID SERIAL PRIMARY KEY,
+    parent_id INT,
+    key VARCHAR UNIQUE,
+    name VARCHAR,
+    geometry geometry_type,
+    description VARCHAR,
+    visibility INT,
+    display_order INT,
+    is_active BOOLEAN,
+    is_expand BOOLEAN,
+    permission VARCHAR,
+    created_by VARCHAR,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Membuat tipe ENUM
+CREATE TYPE field_type AS ENUM ('string', 'number', 'image');
+
+CREATE TABLE details_layers (
+    ID SERIAL PRIMARY KEY,
+    layer_id INT REFERENCES layers(ID), -- Menyatakan foreign key dari tabel layers
+    field VARCHAR,
+    alias VARCHAR,
+    type field_type,
+    popup BOOLEAN,
+    created_by VARCHAR,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
